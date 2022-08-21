@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.icon-box {
+    height: 100px;
+    width: 100px;
+    background: transparent;
+    border-radius: 50%;
+    border: 3px solid hsl(150, 84%, 48%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon-box:before {
+    content: '';
+    position: absolute;
+    height: 89%;
+    width: 89%;
+    background: transparent;
+    border-radius: 50%;
+    border: 4px dotted hsl(150, 84%, 48%);
+    animation: rotate 13s linear infinite;
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.icon-box:hover:before {
+    opacity: 1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.page-2 i {
+    color: hsl(0, 0%, 80%);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.button {
+    --background: hsl(0, 0%, 0%);
+    --background-color: white;
+    --border-color: hsl(150, 84%, 48%);
+    --border-width: 0.125em;
+    --edge-size: 0.7em;
+
+    position: relative;
+    isolation: isolate;
+    display: inline-grid;
+    padding: .8em 1.5em;
+    border: 0;
+    background: var(--background-color);
+    color: antiquewhite;
+    cursor: pointer;
+    clip-path: 
+    polygon(
+        /* top left 2 */
+        var(--edge-size) 0, 
+        /* top right */
+        100% 0, 
+        /* bottom right 1 */
+        100% calc(100% - var(--edge-size)), 
+        /* bottom right 2 */
+        calc(100% - var(--edge-size)) 100%, 
+        /* bottom left */
+        0 100%, 
+        /* top left 1 */
+        0% var(--edge-size)
+        );
+}
+
+.button::before,
+.button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.button::before {
+    background: var(--border-color);
+    z-index: -2;
+}
+
+.button::after {
+    background: var(--background);
+    z-index: -1;
+    clip-path: 
+    polygon(
+        /* top left 2 */
+        calc(var(--edge-size) + var(--border-width) * .25) 
+        var(--border-width), 
+        /* top right */
+        calc(100% - var(--border-width)) 
+        var(--border-width), 
+        /* bottom right 1 */
+        calc(100% - var(--border-width)) 
+        calc(100% - calc(var(--edge-size) + var(--border-width) * .25)), 
+        /* bottom right 2 */
+        calc(100% - calc(var(--edge-size) + var(--border-width) * .25)) 
+        calc(100% - var(--border-width)), 
+        /* bottom left */
+        var(--border-width) 
+        calc(100% - var(--border-width)), 
+        /* top left 1 */
+        var(--border-width) 
+        calc(var(--edge-size) + var(--border-width) * .25)
+        );
+}
+
+/*a {
+    position: relative;
+    padding: 1em 4em;
+    background: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 30%);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    clip-path: polygon(43% 0, 53% 7%, 100% 7%, 100% 62%, 95% 91%, 32% 91%, 
+    0 91%, 0 15%, 8% 0);
+}*/
+
+/*a:hover {
+    background: hsl(0, 0%, 30%);
+    color: hsl(0, 0%, 100%);
+}*/
