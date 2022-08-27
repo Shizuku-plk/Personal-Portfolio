@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,20 +7,23 @@
 }
 
 .page-1 {
-    background: linear-gradient(rgba(4, 9, 30, 0.7), 
+    /*background: linear-gradient(rgba(4, 9, 30, 0.7), 
               rgba(4, 9, 30, 0.9)), 
-              url(../img/img2.jpg);
+              url(../img/img2.jpg);*/
+    background: hsl(0, 0%, 5%);
     position: relative;
     background-position: center;
     background-size: cover;
+    font-family: 'Share Tech Mono';
     color: hsl(0, 0%, 90%);
     opacity: 1;
 }
 
 header a {
     padding: 0.5em;
-    font-size: 1.3rem;
+    font-size: clamp(1.8rem, 1.25vw, 2rem);
     text-decoration: none;
+    font-weight: bold;
     color: hsl(150, 84%, 45%);
 }
 
@@ -28,21 +33,91 @@ header a {
     padding: 6em 1em;
 }
 
+.hero-section h3 {
+    font-size: clamp(1.2rem, 1.25vw, 1.4rem);
+}
+
 .hero-section > span {
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
     color: hsl(150, 84%, 48%);
 }
 
 .hero-button {
-    padding: .5em 0;
+    padding: 0.5em 0;
 }
 
-.hero-button a {
-    padding: 0.5em 1.2em;
-    background: hsl(150, 84%, 48%);
-    color: hsl(0, 0%, 10%);
+.hero-button-button {
+    --background: hsl(0, 0%, 0%);
+    --background-color: white;
+    --border-color: hsl(150, 83%, 34%);
+    --border-width: 0.125em;
+    --edge-size: 0.7em;
+
+    position: relative;
+    isolation: isolate;
+    display: inline-grid;
+    padding: 0.5em;
+    border: 0;
+    background: var(--background-color);
+    color: antiquewhite;
+    cursor: pointer;
+    clip-path: 
+    polygon(
+        /* top left 2 */
+        var(--edge-size) 0, 
+        /* top right */
+        100% 0, 
+        /* bottom right 1 */
+        100% calc(100% - var(--edge-size)), 
+        /* bottom right 2 */
+        calc(100% - var(--edge-size)) 100%, 
+        /* bottom left */
+        0 100%, 
+        /* top left 1 */
+        0% var(--edge-size)
+        );
+}
+
+.hero-button-button::before,
+.hero-button-button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.hero-button-button::before {
+    background: var(--border-color);
+    z-index: -2;
+}
+
+.hero-button-button::after {
+    background: var(--background);
+    z-index: -1;
+    clip-path: 
+    polygon(
+        /* top left 2 */
+        calc(var(--edge-size) + var(--border-width) * .25) 
+        var(--border-width), 
+        /* top right */
+        calc(100% - var(--border-width)) 
+        var(--border-width), 
+        /* bottom right 1 */
+        calc(100% - var(--border-width)) 
+        calc(100% - calc(var(--edge-size) + var(--border-width) * .25)), 
+        /* bottom right 2 */
+        calc(100% - calc(var(--edge-size) + var(--border-width) * .25)) 
+        calc(100% - var(--border-width)), 
+        /* bottom left */
+        var(--border-width) 
+        calc(100% - var(--border-width)), 
+        /* top left 1 */
+        var(--border-width) 
+        calc(var(--edge-size) + var(--border-width) * .25)
+        );
+}
+
+.hero-button-button a {
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.5s;
-    clip-path: polygon(43% 0, 53% 7%, 100% 7%, 100% 62%, 95% 91%, 32% 91%, 
-    0 91%, 0 15%, 8% 0);
+    font-size: clamp(1.12rem, 1.25vw, 1.25rem);
+    color: hsl(150, 84%, 48%);
 }
