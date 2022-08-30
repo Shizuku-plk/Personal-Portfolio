@@ -1,0 +1,134 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar li {
+    list-style: none;
+}
+
+.nav-bar a {
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    font-size: clamp(1.4rem, 1.25vw, 2rem);
+    color: hsl(150, 84%, 48%);
+}
+
+.nav-bar .link {
+    padding: 0 5em;
+}
+
+nav .hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    width: 30px;
+    height: 21px;
+}
+
+.hamburger-btn .bar {
+    height: 3px;
+    width: 100%;
+    background-color: hsl(150, 84%, 48%);
+    border-radius: 10px;
+}
+
+nav .logo {
+    padding: .5em 0.3em;
+}
+
+nav .logo a {
+    text-decoration: none;
+    font-size: clamp(1.5rem, 1.25vw, 2rem);
+    font-weight: bold;
+    color: hsl(150, 84%, 48%);
+}
+
+@media screen and (max-width: 650px) {
+    nav .hamburger-btn {
+        display: flex;
+    }
+
+    .nav-bar {
+        display: none;
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-bar ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-bar li {
+        text-align: center;
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+}
+
+/*@media (min-width: 200px) {
+    nav .hamburger-btn {
+        display: flex;
+    }
+
+    .nav-bar {
+        display: none;
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-bar ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-bar li {
+        text-align: center;
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+}*/
+
+/*@media (min-width: 650px) {
+    nav .hamburger-btn {
+        display: none;
+    }
+
+    .nav-bar {
+        display: block;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    .nav-bar ul {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .nav-bar.active {
+        display: block;
+    }
+}*/
