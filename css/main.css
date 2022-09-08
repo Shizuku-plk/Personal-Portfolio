@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: hsl(0, 0%, 5%);
 }
@@ -30,24 +34,24 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.hero-section > span {
-    font-size: clamp(1rem, 1.25vw, 1.5rem);
+.hero-section h1 {
+    font-size: 2rem;
     color: hsl(150, 84%, 48%);
 }
 
 .hero-section h3 {
-    font-size: clamp(1.2rem, 1.25vw, 1.4rem);
+    font-size: 1.2rem;
     color: hsl(0, 0%, 80%);
 }
 
 @media screen and (min-width: 650px) {
 
     .hero-section h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
-    .hero-section > span {
-        font-size: 1.5rem;
+    .hero-section h1 {
+        font-size: 3rem;
     }
 }
 
@@ -71,20 +75,7 @@ body {
     color: antiquewhite;
     cursor: pointer;
     clip-path: 
-    polygon(
-        /* top left 2 */
-        var(--edge-size) 0,
-        /* top right */
-        100% 0, 
-        /* bottom right 1 */
-        100% calc(100% - var(--edge-size)), 
-        /* bottom right 2 */
-        calc(100% - var(--edge-size)) 100%, 
-        /* bottom left */
-        0 100%, 
-        /* top left 1 */
-        0% var(--edge-size)
-        );
+    polygon( /* top left 2 */var(--edge-size) 0, /* top right */ 100% 0, /* bottom right 1 */ 100% calc(100% - var(--edge-size)), /* bottom right 2 */ calc(100% - var(--edge-size)) 100%, /* bottom left */ 0 100%, /* top left 1 */ 0% var(--edge-size));
 }
 
 .hero-button-button::before,
@@ -129,4 +120,8 @@ body {
     text-decoration: none;
     font-size: clamp(1.12rem, 1.25vw, 1.25rem);
     color: hsl(150, 84%, 48%);
+}
+
+.page-2 {
+    min-height: 100vh;
 }

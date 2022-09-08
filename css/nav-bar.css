@@ -2,6 +2,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
 }
 .nav-bar ul {
     display: flex;
