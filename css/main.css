@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background: hsl(0, 0%, 5%);
+}
+
 .page-1 {
     font-family: 'Share Tech Mono';
 }
@@ -20,11 +24,10 @@
     display: grid;
     place-content: center;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
-    color: hsl(150, 84%, 48%);
 }
 
 .hero-section > span {
@@ -34,6 +37,18 @@
 
 .hero-section h3 {
     font-size: clamp(1.2rem, 1.25vw, 1.4rem);
+    color: hsl(0, 0%, 80%);
+}
+
+@media screen and (min-width: 650px) {
+
+    .hero-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .hero-section > span {
+        font-size: 1.5rem;
+    }
 }
 
 .hero-button {
