@@ -63,7 +63,7 @@ body {
     position: relative;
     width: 30%;
     padding: 0.5em;
-    border: 1px solid hsl(150, 76%, 36%);
+    border: 1px solid hsl(150, 83%, 44%); 
 }
 
 @media screen and (max-width: 650px) {

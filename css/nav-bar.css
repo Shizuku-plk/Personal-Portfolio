@@ -73,7 +73,16 @@ nav .hamburger-btn {
 }
 
 nav .logo {
-    padding: .5em 0.3em;
+    padding: .5em 4em 2em 1em;
+    clip-path: polygon(50% 0%, 100% 0, 76% 38%, 76% 63%, 62% 76%, 21% 76%, 0 100%, 0% 43%, 0 0);
+    background:hsl(0, 6%, 10%);
+}
+
+@media screen and (min-width: 650px) {
+
+    nav .logo {
+        padding: .5em 10em 2em 1em;
+    }
 }
 
 nav .logo a {
