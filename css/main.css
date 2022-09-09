@@ -56,70 +56,54 @@ body {
 }
 
 .hero-button {
-    padding: 0.5em 0;
+    padding: 1em;
 }
 
 .hero-button-button {
-    --background: hsl(0, 0%, 5%);
-    --background-color: white;
-    --border-color: hsl(150, 83%, 34%);
-    --border-width: 0.125em;
-    --edge-size: 0.7em;
-
     position: relative;
-    isolation: isolate;
-    display: inline-grid;
+    width: 30%;
     padding: 0.5em;
-    border: 0;
-    background: var(--background-color);
-    color: antiquewhite;
-    cursor: pointer;
-    clip-path: 
-    polygon( /* top left 2 */var(--edge-size) 0, /* top right */ 100% 0, /* bottom right 1 */ 100% calc(100% - var(--edge-size)), /* bottom right 2 */ calc(100% - var(--edge-size)) 100%, /* bottom left */ 0 100%, /* top left 1 */ 0% var(--edge-size));
+    border: 1px solid hsl(150, 76%, 36%);
+}
+
+@media screen and (max-width: 650px) {
+
+    .hero-button-button {
+        width: 40%;
+    }
+}
+
+.hero-button-button a {
+    color: hsl(150, 84%, 48%);
+    text-decoration: none;
 }
 
 .hero-button-button::before,
 .hero-button-button::after {
-    content: '';
+    content: "";
     position: absolute;
-    inset: 0;
+    width: 20px;
+    height: 20px;
+    border: inherit;
+    transition: all 0.5s;
 }
 
 .hero-button-button::before {
-    background: var(--border-color);
-    z-index: -2;
+    top: -15px;
+    left: -15px;
+    border-width: 1px 0 0 1px;
 }
 
 .hero-button-button::after {
-    background: var(--background);
-    z-index: -1;
-    clip-path: 
-    polygon(
-        /* top left 2 */
-        calc(var(--edge-size) + var(--border-width) * .25) 
-        var(--border-width), 
-        /* top right */
-        calc(100% - var(--border-width)) 
-        var(--border-width), 
-        /* bottom right 1 */
-        calc(100% - var(--border-width)) 
-        calc(100% - calc(var(--edge-size) + var(--border-width) * .25)), 
-        /* bottom right 2 */
-        calc(100% - calc(var(--edge-size) + var(--border-width) * .25)) 
-        calc(100% - var(--border-width)), 
-        /* bottom left */
-        var(--border-width) 
-        calc(100% - var(--border-width)),
-        /* top left 1 */
-        var(--border-width) 
-        calc(var(--edge-size) + var(--border-width) * .25)
-        );
+    bottom: -15px;
+    right: -15px;
+    border-width: 0 1px 1px 0;
 }
 
-.hero-button-button a {
-    text-decoration: none;
-    font-size: clamp(1.12rem, 1.25vw, 1.25rem);
-    color: hsl(150, 84%, 48%);
+.hero-button-button:hover::before,
+.hero-button-button:hover::after {
+    width: calc(50% + 27px);
+    height: calc(50% + 27px);
 }
 
 .page-2 {

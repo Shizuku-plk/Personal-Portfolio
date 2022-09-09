@@ -64,9 +64,10 @@ nav .hamburger-btn {
     border-radius: 10px;
 }
 
-.hamburger-btn .bar-2 {
+.hamburger-btn .bar-1,
+.hamburger-btn .bar-3 {
     height: 3px;
-    width: 80%;
+    width: 70%;
     background-color: hsl(150, 84%, 48%);
     border-radius: 10px;
 }
