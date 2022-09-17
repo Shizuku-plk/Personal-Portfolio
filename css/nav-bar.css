@@ -5,6 +5,7 @@ nav {
     position: fixed;
     width: 100%;
 }
+
 .nav-bar ul {
     display: flex;
 }
@@ -13,6 +14,7 @@ nav {
     list-style: none;
 }
 
+/* Hover effets for navbar on desktop */
 .nav-bar a {
     display: block;
     padding: 0.5em;
@@ -22,8 +24,8 @@ nav {
     background:
       linear-gradient(
         to right,
-        hsl(0, 0%, 5%),
-        hsl(0, 0%, 5%)
+        hsl(220, 6%, 10%),
+        hsl(220, 6%, 10%)
       ),
       linear-gradient(
         to right,
@@ -46,6 +48,7 @@ nav {
     padding: 0 5em;
 }
 
+/* create the hamburger menu bars on the top right side of the screen*/
 nav .hamburger-btn {
     display: none;
     flex-direction: column;
@@ -72,16 +75,18 @@ nav .hamburger-btn {
     border-radius: 10px;
 }
 
+/* clip path shape for the logo(EE) button on the navbar */
 nav .logo {
     padding: .5em 4em 2em 1em;
     clip-path: polygon(50% 0%, 100% 0, 76% 38%, 76% 63%, 62% 76%, 21% 76%, 0 100%, 0% 43%, 0 0);
-    background:hsl(0, 6%, 10%);
+    background:hsl(0, 2%, 19%);
 }
 
+/* media query to adjust clip path size on bigger desktop screens */
 @media screen and (min-width: 650px) {
 
     nav .logo {
-        padding: .5em 10em 2em 1em;
+        padding: .5em 10em 3em 1em;
     }
 }
 
