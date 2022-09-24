@@ -1,3 +1,5 @@
+"user strict";
+
 const hamburgerButton = document.getElementsByClassName("hamburger-btn")[0]
 const navBar = document.getElementsByClassName("nav-bar")[0]
 

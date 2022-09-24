@@ -1,0 +1,55 @@
+/* css cards for page 2 */
+.skill-card {
+    display: flex;
+    justify-content: center;
+    /*width: 15%;
+    padding: 3em;
+    background:hsl(0, 2%, 19%);
+    -webkit-clip-path: polygon(50% 10%, 100% 10%, 100% 43%, 100% 85%, 85% 100%, 0 100%, 0 14%, 13% 0, 36% 0); 
+    clip-path: polygon(50% 10%, 100% 10%, 100% 43%, 100% 85%, 85% 100%, 0 100%, 0 14%, 13% 0, 36% 0);*/
+}
+
+.skill-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: hsla(0, 0%, 0%, 0.2);
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+@media screen and (max-width: 650px) {
+    .skill-card {
+        width: 200px;
+        height: 300px;
+    }
+}
+
+.skill-card::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background: hsl(150, 84%, 48%);
+    animation: animate 8s linear infinite;
+}
+
+.skill-card::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: hsl(220, 6%, 10%);
+}
+
+@keyframes animate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.skill-card svg {
+    z-index: 10;
+}
