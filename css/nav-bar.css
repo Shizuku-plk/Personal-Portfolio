@@ -105,6 +105,14 @@ nav .logo a {
     .nav-bar {
         display: none;
         width: 100%;
+        box-shadow: 10px 11px 24px 6px hsl(0, 0%, 0%);
+        -webkit-box-shadow: 10px 11px 24px 6px hsl(0, 0%, 0%);
+        -moz-box-shadow: 10px 11px 24px 6px hsl(0, 0%, 0%);
+    }
+
+    .nav-bar.nav-bar.active a {
+        color: hsl(150, 94%, 47%);
+        background: hsl(0, 0%, 5%);
     }
 
     nav {

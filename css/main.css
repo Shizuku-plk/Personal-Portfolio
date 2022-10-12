@@ -68,7 +68,8 @@ body {
 }
 
 .work-btn a,
-.hero-button-button a {
+.hero-button-button a,
+.link-btn a {
     position: relative;
     padding: 0.3em;
     color: hsl(150, 84%, 44%);
@@ -90,7 +91,8 @@ body {
 }
 
 .hero-button-button a::before,
-.work-btn a::before {
+.work-btn a::before,
+.link-btn a::before {
     content: " ";
     position: absolute;
     top: -1px;
@@ -104,7 +106,8 @@ body {
 }
 
 .hero-button-button a::after,
-.work-btn a::after {
+.work-btn a::after,
+.link-btn a::after {
     content: " ";
     position: absolute;
     bottom: -1px;
@@ -120,7 +123,9 @@ body {
 .hero-button-button a:hover::before,
 .hero-button-button a:hover::after,
 .work-btn a:hover::before,
-.work-btn a:hover::after {
+.work-btn a:hover::after,
+.link-btn a:hover::before,
+.link-btn a:hover::after {
     width: 40%;
     height: 40%;
     transition-delay: 0s;
@@ -129,17 +134,18 @@ body {
 /****************************************************
 ************************Start of page 2**************
 *****************************************************/
-.page-2, .page-3 {
+.page-2, .page-3, .page-4 {
     min-height: 100vh;
 }
 
-.page-2 h1, .page-3 h1 {
-    padding: 1em;
+.page-2 h1, .page-3 h1, .page-4 h1 {
+    padding: 1em 0 1em 0;
     color: hsl(150, 84%, 48%);
     text-align: center;
 }
 
-.skill-container {
+.skill-container, 
+.project-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,19 +157,61 @@ body {
 .skill-container > * + * {
     margin: 2em 0 0 0;
   }
+
+.project-container > * + * {
+    margin: 2em 0 0 0;
+  }
   
   @media (min-width: 1200px) {
 
-    .page-2 h1, .page-3 h1 {
+    .page-2 h1, .page-3 h1, .page-4 h1 {
         font-size: 3rem;
     }
     
-    .skill-container {
+    .skill-container, .project-container {
       flex-direction: row;
-      padding-top: 20%;
+      padding-top: 10%;
     }
   
     .skill-container > * + * {
       margin: 0 0 0 7em;
     }
+
+    .project-container > * + * {
+        margin: 0 0 0 7em;
+      }
+}
+/****************************************************
+************************Start of page 4**************
+*****************************************************/
+.page-4 {
+    display: grid;
+    place-content: center;
+}
+
+.page-4 form input {
+    display: block;
+    height: 2.5rem;
+    padding: 0 1em 0 1em;
+    margin-top: 1em;
+    border: 1px solid hsl(150, 84%, 44%);
+    border-radius: 14px;
+}
+
+form textarea {
+    padding: 1em 1em 0 1em;
+    margin-top: 1em;
+    border: 1px solid hsl(150, 84%, 44%);
+    border-radius: 14px;
+}
+
+form button {
+    margin-top: 1em;
+    padding: 0.5em;
+    font-size: 0.9rem;
+    width: 50%;
+    border: 1px solid hsl(150, 84%, 44%);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
 }

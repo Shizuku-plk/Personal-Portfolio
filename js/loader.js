@@ -1,4 +1,4 @@
-"user strict";
+"use strict";
 
 $(window).on("load",function(){
     $(".loader-wrapper").fadeOut("slow");
