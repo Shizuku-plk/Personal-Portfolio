@@ -7,6 +7,8 @@ window.addEventListener("load", function() {
 
     // calculate the income total
     calcIncome();
+    // calculate the NEEDS expenses
+    expensesNeeds();
 
     // add an event listener for every form element
     for (let i = 0; i < budgetForm.elements.length; i++) {
