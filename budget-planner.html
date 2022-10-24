@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Planner | Esteban Esquivel</title>
+    <title>Esteban Esquivel | Budget Planner</title>
     <link rel="stylesheet" href="css/budget-planner.css">
     <script src="js/budget-planner.js" defer></script>
 </head>
 <body>
     <div class="container-form">
-        <form id="budget-form" name="budget-form">
+        <form id="budgetForm" name="budgetForm">
             <div class="income">
                 <legend>Monthly Income</legend>
                 <label for="wages">Wages</label>
@@ -26,6 +26,7 @@
                 <input type="number" name="allowance" id="allowance" placeholder="$ 0.00">
 
                 <p id="income-message"></p>
+                <p id="error-message"></p>
             </div>
 
             <div class="expenses">
@@ -34,13 +35,13 @@
                 <input type="text" name="rent" id="rent" placeholder="$ 0.00">
 
                 <label for="car-payment">Car Payment</label>
-                <input type="text" name="car-payment" id="car-payment" placeholder="$ 0.00">
+                <input type="text" name="carPayment" id="carPayment" placeholder="$ 0.00">
 
                 <label for="auto-insurance">Auto Insurance</label>
-                <input type="text" name="auto-insurance" id="auto-insurance" placeholder="$ 0.00">
+                <input type="text" name="autoInsurance" id="autoInsurance" placeholder="$ 0.00">
 
                 <label for="car-maintenance">Car Maintenance/Repair</label>
-                <input type="text" name="car-maintenance" id="car-maintenance" placeholder="$ 0.00">
+                <input type="text" name="carMaintenance" id="carMaintenance" placeholder="$ 0.00">
 
                 <label for="Gasoline">Gasoline</label>
                 <input type="text" name="gasoline" id="gasoline" placeholder="$ 0.00">
@@ -52,13 +53,13 @@
                 <input type="text" name="transportation" id="transportation" placeholder="$ 0.00">
 
                 <label for="phone-bill">Phone Bill</label>
-                <input type="text" name="phone-bill" id="phone-bill" placeholder="$ 0.00">
+                <input type="text" name="phoneBill" id="phoneBill" placeholder="$ 0.00">
 
                 <label for="internet">Internet Bill</label>
-                <input type="text" name="internet-bill" id="internet-bill" placeholder="$ 0.00">
+                <input type="text" name="internetBill" id="internetBill" placeholder="$ 0.00">
 
                 <label for="student-loan">Student Loan Payment</label>
-                <input type="text" name="student-loan" id="student-loan" placeholder="$ 0.00">
+                <input type="text" name="studentLoan" id="studentLoan" placeholder="$ 0.00">
 
                 <label for="tuition">Tuition Fees</label>
                 <input type="text" name="tuition" id="tuition" placeholder="$ 0.00">
@@ -71,6 +72,8 @@
 
                 <label for="other">Other</label>
                 <input type="text" name="other" id="other" placeholder="$ 0.00">
+
+                <p id="expenses-message"></p>
             </div>
         </form>
     </div>

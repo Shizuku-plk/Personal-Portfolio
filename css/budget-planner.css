@@ -3,7 +3,8 @@
     margin: 0 auto;
 }
 
-.income label + input {
+.income label + input,
+.expenses label + input {
     display: block;
 }
 

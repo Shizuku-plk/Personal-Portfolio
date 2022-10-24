@@ -1,28 +1,74 @@
 window.addEventListener("load", function() {
-    let budgetForm = document.forms["budget-form"];
+    let budgetForm = document.forms["budgetForm"];
     let wages = budgetForm.elements["wages"];
 
     // highlight the wages field on load
     wages.focus();
 
     // calculate the income total
-    calcIncome();
+    budgetForm.elements.onchange = calcIncome;
     // calculate the NEEDS expenses
-    expensesNeeds();
+    budgetForm.elements.onchange = expensesNeeds;
 
     // add an event listener for every form element
     for (let i = 0; i < budgetForm.elements.length; i++) {
         budgetForm.elements[i].addEventListener("change", calcIncome);
+        budgetForm.elements[i].addEventListener("change", expensesNeeds);
     }
 
     function calcIncome() {
-        let wagesValue = wages.value;
-        let otherValue = other.value;
-        let studentLoansValue = studentLoans.value;
-        let allowanceValue = allowance.value;
-        let incomeTotal = parseFloat(wagesValue) + parseFloat(otherValue) + parseFloat(studentLoansValue) + parseFloat(allowanceValue);
+        let wagesValue, otherValue, studentLoansValue, allowanceValue, incomeTotal;
         let incomeMessage = document.getElementById("income-message");
 
-        incomeMessage.textContent = incomeTotal;
+        wagesValue = parseFloat(wages.value);
+        otherValue = parseFloat(other.value);
+        studentLoansValue = parseFloat(studentLoans.value);
+        allowanceValue = parseFloat(allowance.value);
+
+        incomeTotal = wagesValue + otherValue + studentLoansValue + allowanceValue;
+
+        incomeMessage.textContent = "Total:  " + incomeTotal;
+
+        ValidateIncome();
+    }
+
+    function expensesNeeds() {
+        let rentValue, carPaymentValue, autoInsuranceValue, carMaintenanceValue, gasolineValue,
+        groceriesValue, transportationValue, phoneBillValue, internetBillValue, studentLoanValue,
+        tuitionValue, booksValue, roomValue, otherValue, expensesTotal;
+
+        let expensesMessage = document.getElementById("expenses-message");
+
+        rentValue = parseFloat(rent.value);
+        carPaymentValue = parseFloat(carPayment.value);
+        autoInsuranceValue = parseFloat(autoInsurance.value);
+        carMaintenanceValue = parseFloat(carMaintenance.value);
+        gasolineValue = parseFloat(gasoline.value);
+        groceriesValue = parseFloat(groceries.value);
+        transportationValue = parseFloat(transportation.value);
+        phoneBillValue = parseFloat(phoneBill.value);
+        internetBillValue = parseFloat(internetBill.value);
+        studentLoanValue = parseFloat(studentLoan.value);
+        tuitionValue = parseFloat(tuition.value);
+        booksValue = parseFloat(books.value);
+        roomValue = parseFloat(room.value);
+        otherValue = parseFloat(other.value);
+
+        expensesTotal = rentValue + carPaymentValue + autoInsuranceValue + carMaintenanceValue + gasolineValue + 
+        groceriesValue + transportationValue + phoneBillValue + internetBillValue + studentLoanValue + tuitionValue +
+        booksValue + roomValue + otherValue;
+
+        expensesMessage.textContent = "Total: " + expensesTotal;
+
+    }
+
+    function ValidateIncome() {
+        let form = document.forms["budgetForm"];
+        let el = form.elements["wages"];
+        let error = document.getElementById("error-message");
+
+        if (el.value == -1) {
+            error.textContent = "error";
+        }
     }
 });
