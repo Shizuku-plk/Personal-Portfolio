@@ -14,16 +14,16 @@
             <div class="income">
                 <legend>Monthly Income</legend>
                 <label for="wages">Wages</label>
-                <input type="number" name="wages" id="wages" placeholder="$ 0.00">
+                <input type="number" name="wages" id="wages" placeholder="$ 0.00" required>
 
                 <label for="other">Other</label>
-                <input type="number" name="other" id="other" placeholder="$ 0.00">
+                <input type="number" name="other" id="other" placeholder="$ 0.00" required>
 
                 <label for="studentLoans">Student Loans</label>
-                <input type="number" name="studentLoans" id="studentLoans" placeholder="$ 0.00">
+                <input type="number" name="studentLoans" id="studentLoans" placeholder="$ 0.00" required>
 
                 <label for="allowance">Allowance</label>
-                <input type="number" name="allowance" id="allowance" placeholder="$ 0.00">
+                <input type="number" name="allowance" id="allowance" placeholder="$ 0.00" required>
 
                 <p id="income-message"></p>
                 <p id="error-message"></p>
@@ -32,48 +32,83 @@
             <div class="expenses">
                 <legend>Expenses </br>(Monthly NEEDS)</legend>
                 <label for="rent">Rent</label>
-                <input type="text" name="rent" id="rent" placeholder="$ 0.00">
+                <input type="number" name="rent" id="rent" placeholder="$ 0.00">
 
                 <label for="car-payment">Car Payment</label>
-                <input type="text" name="carPayment" id="carPayment" placeholder="$ 0.00">
+                <input type="number" name="carPayment" id="carPayment" placeholder="$ 0.00">
 
                 <label for="auto-insurance">Auto Insurance</label>
-                <input type="text" name="autoInsurance" id="autoInsurance" placeholder="$ 0.00">
+                <input type="number" name="autoInsurance" id="autoInsurance" placeholder="$ 0.00">
 
                 <label for="car-maintenance">Car Maintenance/Repair</label>
-                <input type="text" name="carMaintenance" id="carMaintenance" placeholder="$ 0.00">
+                <input type="number" name="carMaintenance" id="carMaintenance" placeholder="$ 0.00">
 
                 <label for="Gasoline">Gasoline</label>
-                <input type="text" name="gasoline" id="gasoline" placeholder="$ 0.00">
+                <input type="number" name="gasoline" id="gasoline" placeholder="$ 0.00">
 
                 <label for="groceries">Groceries/other essentials</label>
-                <input type="text" name="groceries" id="groceries" placeholder="$ 0.00">
+                <input type="number" name="groceries" id="groceries" placeholder="$ 0.00">
 
                 <label for="transportation">Public Transportation</label>
-                <input type="text" name="transportation" id="transportation" placeholder="$ 0.00">
+                <input type="number" name="transportation" id="transportation" placeholder="$ 0.00">
 
                 <label for="phone-bill">Phone Bill</label>
-                <input type="text" name="phoneBill" id="phoneBill" placeholder="$ 0.00">
+                <input type="number" name="phoneBill" id="phoneBill" placeholder="$ 0.00">
 
                 <label for="internet">Internet Bill</label>
-                <input type="text" name="internetBill" id="internetBill" placeholder="$ 0.00">
+                <input type="number" name="internetBill" id="internetBill" placeholder="$ 0.00">
 
                 <label for="student-loan">Student Loan Payment</label>
-                <input type="text" name="studentLoan" id="studentLoan" placeholder="$ 0.00">
+                <input type="number" name="studentLoan" id="studentLoan" placeholder="$ 0.00">
 
                 <label for="tuition">Tuition Fees</label>
-                <input type="text" name="tuition" id="tuition" placeholder="$ 0.00">
+                <input type="number" name="tuition" id="tuition" placeholder="$ 0.00">
 
                 <label for="books">Books</label>
-                <input type="text" name="books" id="books" placeholder="$ 0.00">
+                <input type="number" name="books" id="books" placeholder="$ 0.00">
 
                 <label for="room">Room/Board</label>
-                <input type="text" name="room" id="room" placeholder="$ 0.00">
+                <input type="number" name="room" id="room" placeholder="$ 0.00">
 
                 <label for="other">Other</label>
-                <input type="text" name="other" id="other" placeholder="$ 0.00">
+                <input type="number" name="other" id="other" placeholder="$ 0.00">
 
                 <p id="expenses-message"></p>
+            </div>
+
+            <div class="wants">
+                <label for="clothing">Clothing, jewelry, etc.</label>
+                <input type="number" name="clothing" id="clothing" placeholder="$ 0.00">
+
+                <label for="dining">Dining out</label>
+                <input type="number" name="dining" id="dining" placeholder="$ 0.00">
+
+                <label for="meals">Special meals at home</label>
+                <input type="number" name="meals" id="meals" placeholder="$ 0.00">
+
+                <label for="alcohol">Alcohol</label>
+                <input type="number" name="alcohol" id="alcohol">
+
+                <label for="movie">Movies, concerts, and event tickets</label>
+                <input type="number" name="movie" id="movie" placeholder="$ 0.00">
+
+                <label for="gym">Gym or club memberships</label>
+                <input type="number" name="gym" id="gym" placeholder="$ 0.00">
+
+                <label for="travel">Travel expenses</label>
+                <input type="number" name="travel" id="travel" placeholder="$ 0.00">
+
+                <label for="streaming">Streaming services or cable</label>
+                <input type="number" name="streaming" id="streaming" placeholder="$ 0.00">
+
+                <label for="home">Home decoration</label>
+                <input type="number" name="home" id="home" placeholder="$ 0.00">
+
+                <label for="sports">Sports, activities, etc.</label>
+                <input type="number" name="sports" id="sports" placeholder="$ 0.00">
+
+                <label for="other">Other</label>
+                <input type="number" name="other" id="other" placeholder="$ 0.00">
             </div>
         </form>
     </div>

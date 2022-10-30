@@ -4,7 +4,7 @@ window.addEventListener("load", function() {
 
     // highlight the wages field on load
     wages.focus();
-
+    budgetForm.reset();
     // calculate the income total
     budgetForm.elements.onchange = calcIncome;
     // calculate the NEEDS expenses
@@ -61,14 +61,8 @@ window.addEventListener("load", function() {
         expensesMessage.textContent = "Total: " + expensesTotal;
 
     }
-
-    function ValidateIncome() {
-        let form = document.forms["budgetForm"];
-        let el = form.elements["wages"];
-        let error = document.getElementById("error-message");
-
-        if (el.value == -1) {
-            error.textContent = "error";
-        }
-    }
 });
+
+function ValidateIncome() {
+    let errorMessage = document.getElementById("error-message");
+}
