@@ -4,7 +4,8 @@
 }
 
 .income label + input,
-.expenses label + input {
+.expenses label + input,
+.wants label + input {
     display: block;
 }
 

@@ -14,19 +14,19 @@
             <div class="income">
                 <legend>Monthly Income</legend>
                 <label for="wages">Wages</label>
-                <input type="number" name="wages" id="wages" placeholder="$ 0.00" required>
+                <input type="number" name="wages" id="wages" placeholder="$ 0.00">
 
                 <label for="other">Other</label>
-                <input type="number" name="other" id="other" placeholder="$ 0.00" required>
+                <input type="number" name="other" id="other" placeholder="$ 0.00">
 
                 <label for="studentLoans">Student Loans</label>
-                <input type="number" name="studentLoans" id="studentLoans" placeholder="$ 0.00" required>
+                <input type="number" name="studentLoans" id="studentLoans" placeholder="$ 0.00">
 
                 <label for="allowance">Allowance</label>
-                <input type="number" name="allowance" id="allowance" placeholder="$ 0.00" required>
+                <input type="number" name="allowance" id="allowance" placeholder="$ 0.00">
 
-                <p id="income-message"></p>
-                <p id="error-message"></p>
+                <output id="income-message"></output><br>
+                <button type="button" id="incomeButton">Save</button>
             </div>
 
             <div class="expenses">
@@ -73,10 +73,12 @@
                 <label for="other">Other</label>
                 <input type="number" name="other" id="other" placeholder="$ 0.00">
 
-                <p id="expenses-message"></p>
+                <output id="expenses-message"></output><br>
+                <button type="button" id="expensesButton">Save</button>
             </div>
 
             <div class="wants">
+                <legend>WANTS</legend>
                 <label for="clothing">Clothing, jewelry, etc.</label>
                 <input type="number" name="clothing" id="clothing" placeholder="$ 0.00">
 
@@ -87,7 +89,7 @@
                 <input type="number" name="meals" id="meals" placeholder="$ 0.00">
 
                 <label for="alcohol">Alcohol</label>
-                <input type="number" name="alcohol" id="alcohol">
+                <input type="number" name="alcohol" id="alcohol"  placeholder="$ 0.00">
 
                 <label for="movie">Movies, concerts, and event tickets</label>
                 <input type="number" name="movie" id="movie" placeholder="$ 0.00">
@@ -109,7 +111,12 @@
 
                 <label for="other">Other</label>
                 <input type="number" name="other" id="other" placeholder="$ 0.00">
+
+                <output id="wants-message"></output><br>
+                <button type="button" id="wantsButton">Save</button>
             </div>
+
+            <p id="finalResults"></p>
         </form>
     </div>
 </body>
