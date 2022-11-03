@@ -83,8 +83,8 @@
                 <label for="room">Room/Board</label>
                 <input type="number" name="room" id="room" placeholder="$ 0.00">
 
-                <label for="other">Other</label>
-                <input type="number" name="other" id="other" placeholder="$ 0.00">
+                <label for="otherE">Other</label>
+                <input type="number" name="otherE" id="otherE" placeholder="$ 0.00">
 
                 <output id="expenses-message">$0.00</output><br>
                 <button type="button" id="expensesButton">Save</button>
@@ -122,8 +122,8 @@
                 <label for="sports">Sports, activities, etc.</label>
                 <input type="number" name="sports" id="sports" placeholder="$ 0.00">
 
-                <label for="other">Other</label>
-                <input type="number" name="other" id="other" placeholder="$ 0.00">
+                <label for="otherW">Other</label>
+                <input type="number" name="otherW" id="otherW" placeholder="$ 0.00">
 
                 <output id="wants-message">$0.00</output><br>
                 <button type="button" id="wantsButton">Save</button>
@@ -131,11 +131,23 @@
 
             <div class="savings">
                 <legend>Savings</legend>
-                <label for="savings">Savings account contributions</label>
-                <input type="number" name="savings" id="savings" placeholder="$ 0.00">
+                <label for="saving">Savings account contributions</label>
+                <input type="number" name="saving" id="saving" placeholder="$ 0.00">
 
                 <label for="emergency">Emergency fund contributions</label>
                 <input type="number" name="emergency" id="emergency" placeholder="$ 0.00">
+
+                <label for="four1k">401K contributions</label>
+                <input type="number" name="four1k" id="four1k" placeholder="$ 0.00">
+
+                <label for="ira">IRA contributions</label>
+                <input type="number" name="ira" id="ira" placeholder="$ 0.00">
+
+                <label for="investments">Other investments</label>
+                <input type="number" name="investments" id="investments" placeholder="$ 0.00">
+
+                <label for="otherS">Other</label>
+                <input type="number" name="otherS" id="otherS" placeholder="$ 0.00">
 
                 <output id="savings-message">$0.00</output><br>
                 <button type="button" id="savingsButton">Save</button>
@@ -144,11 +156,21 @@
     </div>
 
     <div class="Totals">
-        <h2>Your Totals:</h2>
-        <p id="income-totals">Income: </p>
-        <p id="expenses-totals">Expenses: </p>
-        <p id="wants-totals">Wants: </p>
-        <p id="savings-totals">Savings: </p>
+        <div class="summary">
+            <h2>Your Totals:</h2>
+            <p id="income-totals">Income: </p>
+            <p id="expenses-totals">Needs: </p>
+            <p id="wants-totals">Wants: </p>
+            <p id="savings-totals">Savings: </p>
+        </div>
+
+        <div class="fiveThreeTwoRule">
+            <h2>50/30/20 Rule says you should:</h2>
+            <p id="income-percent"></p>
+            <p id="expenses-percent"></p>
+            <p id="wants-percent"></p>
+            <p id="savings-percent"></p>
+        </div>
     </div>
 </body>
 </html>
