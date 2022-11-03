@@ -5,7 +5,8 @@
 
 .income label + input,
 .expenses label + input,
-.wants label + input {
+.wants label + input, 
+.savings label + input {
     display: block;
 }
 

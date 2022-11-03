@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="Shortcut Icon" type="img/png" href="img/icons8-deathly-hallows-16.png">
     <title>Esteban Esquivel | Budget Planner</title>
     <link rel="stylesheet" href="css/budget-planner.css">
     <script src="js/budget-planner.js" defer></script>
 </head>
 <body>
+    <article>
+        <h1>Budget Planner</h1>
+        <h2>What is the 50/30/20 rule in budget planning?</h2>
+        <p>The 50/30/20 rules states that you should split your income into the following 3 categories:
+            50% on needs, 30% on wants, and 20% on savings. <a 
+            href="https://www.investopedia.com/ask/answers/022916/what-502030-budget-rule.asp">
+            Learn more</a><br>
+            This Budget Planner calculates the 50/30/20 rule for you based on your input. If a field doesn't 
+            apply to you put a "0".
+        </p>
+    </article>
     <div class="container-form">
         <form id="budgetForm" name="budgetForm">
             <div class="income">
@@ -25,7 +38,7 @@
                 <label for="allowance">Allowance</label>
                 <input type="number" name="allowance" id="allowance" placeholder="$ 0.00">
 
-                <output id="income-message"></output><br>
+                <output id="income-message">$0.00</output><br>
                 <button type="button" id="incomeButton">Save</button>
             </div>
 
@@ -73,12 +86,12 @@
                 <label for="other">Other</label>
                 <input type="number" name="other" id="other" placeholder="$ 0.00">
 
-                <output id="expenses-message"></output><br>
+                <output id="expenses-message">$0.00</output><br>
                 <button type="button" id="expensesButton">Save</button>
             </div>
 
             <div class="wants">
-                <legend>WANTS</legend>
+                <legend>Wants</legend>
                 <label for="clothing">Clothing, jewelry, etc.</label>
                 <input type="number" name="clothing" id="clothing" placeholder="$ 0.00">
 
@@ -112,12 +125,30 @@
                 <label for="other">Other</label>
                 <input type="number" name="other" id="other" placeholder="$ 0.00">
 
-                <output id="wants-message"></output><br>
+                <output id="wants-message">$0.00</output><br>
                 <button type="button" id="wantsButton">Save</button>
             </div>
 
-            <p id="finalResults"></p>
+            <div class="savings">
+                <legend>Savings</legend>
+                <label for="savings">Savings account contributions</label>
+                <input type="number" name="savings" id="savings" placeholder="$ 0.00">
+
+                <label for="emergency">Emergency fund contributions</label>
+                <input type="number" name="emergency" id="emergency" placeholder="$ 0.00">
+
+                <output id="savings-message">$0.00</output><br>
+                <button type="button" id="savingsButton">Save</button>
+            </div>
         </form>
+    </div>
+
+    <div class="Totals">
+        <h2>Your Totals:</h2>
+        <p id="income-totals">Income: </p>
+        <p id="expenses-totals">Expenses: </p>
+        <p id="wants-totals">Wants: </p>
+        <p id="savings-totals">Savings: </p>
     </div>
 </body>
 </html>

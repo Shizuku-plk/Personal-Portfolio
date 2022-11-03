@@ -10,6 +10,7 @@ window.addEventListener("load", function() {
 let incomeButton = document.getElementById("incomeButton");
 let expensesButton = document.getElementById("expensesButton");
 let wantsButton = document.getElementById("wantsButton");
+let savingsButton = document.getElementById("savingsButton");
 
 // call the calcIncome function 
 incomeButton.onclick = calcIncome;
@@ -17,11 +18,14 @@ incomeButton.onclick = calcIncome;
 expensesButton.onclick = expensesNeeds;
 // call the wants function
 wantsButton.onclick = wants;
+// call the savings function
+savingsButton.onclick = savings;
 
 // function to calculate the income
 function calcIncome() {
     let wagesValue, otherValue, studentLoansValue, allowanceValue, incomeTotal;
     let incomeMessage = document.getElementById("income-message");
+    let incomeEndTotals = document.getElementById("income-totals");
 
     wagesValue = parseFloat(wages.value);
     otherValue = parseFloat(other.value);
@@ -30,11 +34,13 @@ function calcIncome() {
 
     incomeTotal = wagesValue + otherValue + studentLoansValue + allowanceValue;
 
-    if(isNaN(wagesValue) || isNaN(otherValue) || isNaN(studentLoansValue) || isNaN(allowanceValue)) {
+    if (isNaN(wagesValue) || isNaN(otherValue) || isNaN(studentLoansValue) || isNaN(allowanceValue)) {
         incomeMessage.textContent = "Enter a valid input";
     } else {
-        incomeMessage.textContent = "Total: " + incomeTotal;
+        incomeMessage.textContent = "Total: $" + incomeTotal;
     }
+
+    incomeEndTotals.textContent = "Income: $" + incomeTotal;
 }
 
 // function to calculate the expenses
@@ -44,6 +50,7 @@ function expensesNeeds() {
     tuitionValue, booksValue, roomValue, otherValue, expensesTotal;
 
     let expensesMessage = document.getElementById("expenses-message");
+    let expensesEndTotals = document.getElementById("expenses-totals");
 
     rentValue = parseFloat(rent.value);
     carPaymentValue = parseFloat(carPayment.value);
@@ -70,8 +77,9 @@ function expensesNeeds() {
     || isNaN(roomValue) || isNaN(otherValue)) {
         expensesMessage.textContent = "Enter a valid input";
     } else {
-        expensesMessage.textContent = "Total: " + expensesTotal;
+        expensesMessage.textContent = "Total: $" + expensesTotal;
     }
+    expensesEndTotals.textContent = "Expenses: $" + expensesTotal;
 }
 
 // function to calculate the wants
@@ -80,6 +88,7 @@ function wants() {
     homeValue, sportsValue, otherValue, wantsTotal;
 
     let wantsMessage = document.getElementById("wants-message");
+    let wantsEndTotals = document.getElementById("wants-totals");
     
     clothingValue = parseFloat(clothing.value);
     diningValue = parseFloat(dining.value);
@@ -98,9 +107,10 @@ function wants() {
 
     if (isNaN(clothingValue) || isNaN(diningValue) || isNaN(mealsValue) || isNaN(alcoholValue)
     || isNaN(movieValue) || isNaN(gymValue) || isNaN(travelValue) || isNaN(streamingvalue)
-    || isNaN(homeValue) || isNaN(sportsValue) || isNaN(homeValue)) {
+    || isNaN(homeValue) || isNaN(sportsValue) || isNaN(homeValue) || isNaN(otherValue)) {
         wantsMessage.textContent = "Enter a valid input";
     } else {
-        wantsMessage.textContent = "Total: " + wantsTotal;
+        wantsMessage.textContent = "Total: $" + wantsTotal;
     }
+    wantsEndTotals.textContent = "Wants: $" + wantsTotal;
 }
