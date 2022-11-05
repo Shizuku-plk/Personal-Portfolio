@@ -39,15 +39,14 @@ function calcIncome() {
     savingsPercent = incomeTotal * 0.2;
 
     if (isNaN(wagesValue) || isNaN(otherValue) || isNaN(studentLoansValue) || isNaN(allowanceValue)) {
-        incomeMessage.textContent = "Enter a valid input";
+        incomeMessage.textContent = "ERROR: Enter a valid input";
     } else {
         incomeMessage.textContent = "Total: $" + incomeTotal;
+        incomeEndTotals.textContent = "Income: $" + incomeTotal;
+        expensesPercentTotal.textContent = "$" + expensesPercent + " towards needs";
+        wantsPercentTotal.textContent = "$" + wantsPercent + "  towards wants";
+        savingsPercentTotal.textContent = "$" + savingsPercent + " towards savings";
     }
-
-    incomeEndTotals.textContent = "Income: $" + incomeTotal;
-    expensesPercentTotal.textContent = "Save: $" + expensesPercent + " for your needs";
-    wantsPercentTotal.textContent = "Save: $" + wantsPercent + "  for your wants";
-    savingsPercentTotal.textContent = "Save: $" + savingsPercent + " for your savings";
 }
 
 // function to calculate the expenses
@@ -82,11 +81,11 @@ function expensesNeeds() {
     || isNaN(gasolineValue) || isNaN(groceriesValue) || isNaN(transportationValue) || isNaN(phoneBillValue)
     || isNaN(internetBillValue) || isNaN(studentLoanValue) || isNaN(tuitionValue) || isNaN(booksValue)
     || isNaN(roomValue) || isNaN(otherValue)) {
-        expensesMessage.textContent = "Enter a valid input";
+        expensesMessage.textContent = "ERROR: Enter a valid input";
     } else {
         expensesMessage.textContent = "Total: $" + expensesTotal;
+        expensesEndTotals.textContent = "Needs: $" + expensesTotal;
     }
-    expensesEndTotals.textContent = "Needs: $" + expensesTotal;
 }
 
 // function to calculate the wants
@@ -115,11 +114,11 @@ function wants() {
     if (isNaN(clothingValue) || isNaN(diningValue) || isNaN(mealsValue) || isNaN(alcoholValue)
     || isNaN(movieValue) || isNaN(gymValue) || isNaN(travelValue) || isNaN(streamingvalue)
     || isNaN(homeValue) || isNaN(sportsValue) || isNaN(homeValue) || isNaN(otherValue)) {
-        wantsMessage.textContent = "Enter a valid input";
+        wantsMessage.textContent = "ERROR: Enter a valid input";
     } else {
         wantsMessage.textContent = "Total: $" + wantsTotal;
+        wantsEndTotals.textContent = "Wants: $" + wantsTotal;
     }
-    wantsEndTotals.textContent = "Wants: $" + wantsTotal;
 }
 
 function savings() {
@@ -139,9 +138,9 @@ function savings() {
 
     if (isNaN(savingValue) || isNaN(emergencyValue) || isNaN(four1kValue) || isNaN(iraValue) || isNaN(investmentsValue)
     || isNaN(otherValue)) {
-        savingsMessage.textContent = "Enter a valid input";
+        savingsMessage.textContent = "ERROR: Enter a valid input";
     } else {
         savingsMessage.textContent = "Total: $" + savingsTotal;
+        savingsEndTotals.textContent = "Savings: $" + savingsTotal;
     }
-    savingsEndTotals.textContent = "Savings: $" + savingsTotal;
 }

@@ -7,12 +7,49 @@
     <!--Favicon-->
     <link rel="Shortcut Icon" type="img/png" href="img/icons8-deathly-hallows-16.png">
     <title>Esteban Esquivel | Budget Planner</title>
+    <!--CSS-->
     <link rel="stylesheet" href="css/budget-planner.css">
+    <link rel="stylesheet" href="css/nav-bar.css">
+    <!--JavaScript-->
     <script src="js/budget-planner.js" defer></script>
+    <script src="js/script-menu.js" defer></script>
 </head>
 <body>
-    <article>
+    <nav>
+
+        <a href="#" class="hamburger-btn">
+            <span class="bar-1"></span>
+            <span class="bar"></span>
+            <span class="bar-3"></span>
+        </a>
+
+        <div class="logo">
+            <a href="index.html">EE</a>
+        </div>
+        <div class="nav-bar">
+            <ul>
+                <li class="link"><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <article class="intro">
         <h1>Budget Planner</h1>
+        <h2>What is Budgeting and what is the purpose of a Budget Planner?</h2>
+        <p>
+            Budgeting is the process of creating a plan to spend your money. 
+            This spending plan is called a budget. Creating this spending plan 
+            allows you to determine in advance whether you will have enough money to do the 
+            things you need to do or would like to do.
+            Since budgeting allows you to create a spending plan for your money, 
+            it ensures that you will always have enough money for the things you need and 
+            the things that are important to you. Following a budget or spending plan will also 
+            keep you out of debt or help you work your way out of debt if you are currently in debt.
+        </p>
+    </article>
+
+    <article>
         <h2>What is the 50/30/20 rule in budget planning?</h2>
         <p>The 50/30/20 rules states that you should split your income into the following 3 categories:
             50% on needs, 30% on wants, and 20% on savings. <a 
@@ -26,138 +63,216 @@
         <form id="budgetForm" name="budgetForm">
             <div class="income">
                 <h3>Monthly Income</h3>
-                <label for="wages">Wages</label>
-                <input type="number" name="wages" id="wages" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="wages">Wages</label>
+                    <input type="number" name="wages" id="wages" placeholder="$ 0.00">
+                </div>
 
-                <label for="other">Other</label>
-                <input type="number" name="other" id="other" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="other">Other</label>
+                    <input type="number" name="other" id="other" placeholder="$ 0.00">
+                </div>
 
-                <label for="studentLoans">Student Loans</label>
-                <input type="number" name="studentLoans" id="studentLoans" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="studentLoans">Student Loans</label>
+                    <input type="number" name="studentLoans" id="studentLoans" placeholder="$ 0.00">
+                </div>
 
-                <label for="allowance">Allowance</label>
-                <input type="number" name="allowance" id="allowance" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="allowance">Allowance</label>
+                    <input type="number" name="allowance" id="allowance" placeholder="$ 0.00">
+                </div>
 
-                <output id="income-message">$0.00</output><br>
+                <div class="output">
+                    <output id="income-message">$0.00</output><br>
+                </div>
                 <button type="button" id="incomeButton">Save</button>
             </div>
 
             <div class="expenses">
                 <h3>Expenses(Needs)</h3>
-                <label for="rent">Rent</label>
-                <input type="number" name="rent" id="rent" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="rent">Rent</label>
+                    <input type="number" name="rent" id="rent" placeholder="$ 0.00">
+                </div>
 
-                <label for="carPayment">Car Payment</label>
-                <input type="number" name="carPayment" id="carPayment" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="carPayment">Car Payment</label>
+                    <input type="number" name="carPayment" id="carPayment" placeholder="$ 0.00">
+                </div>
 
-                <label for="autoInsurance">Auto Insurance</label>
-                <input type="number" name="autoInsurance" id="autoInsurance" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="autoInsurance">Auto Insurance</label>
+                    <input type="number" name="autoInsurance" id="autoInsurance" placeholder="$ 0.00">
+                </div>
 
-                <label for="carMaintenance">Car Maintenance/Repair</label>
-                <input type="number" name="carMaintenance" id="carMaintenance" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="carMaintenance">Car Maintenance/Repair</label>
+                    <input type="number" name="carMaintenance" id="carMaintenance" placeholder="$ 0.00">
+                </div>
 
-                <label for="gasoline">Gasoline</label>
-                <input type="number" name="gasoline" id="gasoline" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="gasoline">Gasoline</label>
+                    <input type="number" name="gasoline" id="gasoline" placeholder="$ 0.00">
+                </div>
 
-                <label for="groceries">Groceries/other essentials</label>
-                <input type="number" name="groceries" id="groceries" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="groceries">Groceries/other essentials</label>
+                    <input type="number" name="groceries" id="groceries" placeholder="$ 0.00">
+                </div>
 
-                <label for="transportation">Public Transportation</label>
-                <input type="number" name="transportation" id="transportation" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="transportation">Public Transportation</label>
+                    <input type="number" name="transportation" id="transportation" placeholder="$ 0.00">
+                </div>
 
-                <label for="phoneBill">Phone Bill</label>
-                <input type="number" name="phoneBill" id="phoneBill" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="phoneBill">Phone Bill</label>
+                    <input type="number" name="phoneBill" id="phoneBill" placeholder="$ 0.00">
+                </div>
 
-                <label for="internetBill">Internet Bill</label>
-                <input type="number" name="internetBill" id="internetBill" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="internetBill">Internet Bill</label>
+                    <input type="number" name="internetBill" id="internetBill" placeholder="$ 0.00">
+                </div>
 
-                <label for="studentLoan">Student Loan Payment</label>
-                <input type="number" name="studentLoan" id="studentLoan" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="studentLoan">Student Loan Payment</label>
+                    <input type="number" name="studentLoan" id="studentLoan" placeholder="$ 0.00">
+                </div>
 
-                <label for="tuition">Tuition Fees</label>
-                <input type="number" name="tuition" id="tuition" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="tuition">Tuition Fees</label>
+                    <input type="number" name="tuition" id="tuition" placeholder="$ 0.00">
+                </div>
 
-                <label for="books">Books</label>
-                <input type="number" name="books" id="books" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="books">Books</label>
+                    <input type="number" name="books" id="books" placeholder="$ 0.00">
+                </div>
 
-                <label for="room">Room/Board</label>
-                <input type="number" name="room" id="room" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="room">Room/Board</label>
+                    <input type="number" name="room" id="room" placeholder="$ 0.00">
+                </div>
 
-                <label for="otherE">Other</label>
-                <input type="number" name="otherE" id="otherE" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="otherE">Other</label>
+                    <input type="number" name="otherE" id="otherE" placeholder="$ 0.00">
+                </div>
 
-                <output id="expenses-message">$0.00</output><br>
+                <div class="output">
+                    <output id="expenses-message">$0.00</output><br>
+                </div>
                 <button type="button" id="expensesButton">Save</button>
             </div>
 
             <div class="wants">
                 <h3>Wants</h3>
-                <label for="clothing">Clothing, jewelry, etc.</label>
-                <input type="number" name="clothing" id="clothing" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="clothing">Clothing, jewelry, etc.</label>
+                    <input type="number" name="clothing" id="clothing" placeholder="$ 0.00">
+                </div>
 
-                <label for="dining">Dining out</label>
-                <input type="number" name="dining" id="dining" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="dining">Dining out</label>
+                    <input type="number" name="dining" id="dining" placeholder="$ 0.00">
+                </div>
 
-                <label for="meals">Special meals at home</label>
-                <input type="number" name="meals" id="meals" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="meals">Special meals at home</label>
+                    <input type="number" name="meals" id="meals" placeholder="$ 0.00">
+                </div>
 
-                <label for="alcohol">Alcohol</label>
-                <input type="number" name="alcohol" id="alcohol"  placeholder="$ 0.00">
+                <div class="row">
+                    <label for="alcohol">Alcohol</label>
+                    <input type="number" name="alcohol" id="alcohol"  placeholder="$ 0.00">
+                </div>
 
-                <label for="movie">Movies, concerts, and event tickets</label>
-                <input type="number" name="movie" id="movie" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="movie">Movies, concerts, and event tickets</label>
+                    <input type="number" name="movie" id="movie" placeholder="$ 0.00">
+                </div>
 
-                <label for="gym">Gym or club memberships</label>
-                <input type="number" name="gym" id="gym" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="gym">Gym or club memberships</label>
+                    <input type="number" name="gym" id="gym" placeholder="$ 0.00">
+                </div>
 
-                <label for="travel">Travel expenses</label>
-                <input type="number" name="travel" id="travel" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="travel">Travel expenses</label>
+                    <input type="number" name="travel" id="travel" placeholder="$ 0.00">
+                </div>
 
-                <label for="streaming">Streaming services or cable</label>
-                <input type="number" name="streaming" id="streaming" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="streaming">Streaming services or cable</label>
+                    <input type="number" name="streaming" id="streaming" placeholder="$ 0.00">
+                </div>
 
-                <label for="home">Home decoration</label>
-                <input type="number" name="home" id="home" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="home">Home decoration</label>
+                    <input type="number" name="home" id="home" placeholder="$ 0.00">
+                </div>
 
-                <label for="sports">Sports, activities, etc.</label>
-                <input type="number" name="sports" id="sports" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="sports">Sports, activities, etc.</label>
+                    <input type="number" name="sports" id="sports" placeholder="$ 0.00">
+                </div>
 
-                <label for="otherW">Other</label>
-                <input type="number" name="otherW" id="otherW" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="otherW">Other</label>
+                    <input type="number" name="otherW" id="otherW" placeholder="$ 0.00">
+                </div>
 
-                <output id="wants-message">$0.00</output><br>
+                <div class="output">
+                    <output id="wants-message">$0.00</output><br>
+                </div>
                 <button type="button" id="wantsButton">Save</button>
             </div>
 
             <div class="savings">
                 <h3>Savings</h3>
-                <label for="saving">Savings account contributions</label>
-                <input type="number" name="saving" id="saving" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="saving">Savings account contributions</label>
+                    <input type="number" name="saving" id="saving" placeholder="$ 0.00">
+                </div>
 
-                <label for="emergency">Emergency fund contributions</label>
-                <input type="number" name="emergency" id="emergency" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="emergency">Emergency fund contributions</label>
+                    <input type="number" name="emergency" id="emergency" placeholder="$ 0.00">
+                </div>
 
-                <label for="four1k">401K contributions</label>
-                <input type="number" name="four1k" id="four1k" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="four1k">401K contributions</label>
+                    <input type="number" name="four1k" id="four1k" placeholder="$ 0.00">
+                </div>
 
-                <label for="ira">IRA contributions</label>
-                <input type="number" name="ira" id="ira" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="ira">IRA contributions</label>
+                    <input type="number" name="ira" id="ira" placeholder="$ 0.00">
+                </div>
 
-                <label for="investments">Other investments</label>
-                <input type="number" name="investments" id="investments" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="investments">Other investments</label>
+                    <input type="number" name="investments" id="investments" placeholder="$ 0.00">
+                </div>
 
-                <label for="otherS">Other</label>
-                <input type="number" name="otherS" id="otherS" placeholder="$ 0.00">
+                <div class="row">
+                    <label for="otherS">Other</label>
+                    <input type="number" name="otherS" id="otherS" placeholder="$ 0.00">
+                </div>
 
-                <output id="savings-message">$0.00</output><br>
+                <div class="output">
+                    <output id="savings-message">$0.00</output><br>
+                </div>
                 <button type="button" id="savingsButton">Save</button>
             </div>
         </form>
     </div>
 
-    <div class="Totals">
+    <div class="totals">
         <div class="summary">
-            <h2>Your Totals:</h2>
+            <h3>Your Totals:</h3>
             <p id="income-totals">Income: </p>
             <p id="expenses-totals">Needs: </p>
             <p id="wants-totals">Wants: </p>
@@ -165,7 +280,7 @@
         </div>
 
         <div class="fiveThreeTwoRule">
-            <h2>50/30/20 Rule says you should:</h2>
+            <h3>50/30/20 Rule:</h3>
             <p id="income-percent"></p>
             <p id="expenses-percent"></p>
             <p id="wants-percent"></p>

@@ -1,6 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: hsl(220, 6%, 10%);
+    color: hsl(0, 0%, 95%);
+}
+
+.intro {
+    padding-top: 15%;
+}
+
+article h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+article h2, article p {
+    padding: 0.5em;
+}
+
 .container-form {
     width: 50%;
     margin: 0 auto;
+}
+
+form h3 {
+    padding: 0.5em 0 0.3em 0;
+    font-size: 1.5rem;
+}
+
+form input {
+    height: 2.5rem;
+    padding: 0 1em 0 1em;
+    margin-top: 0.5em;
+    border: 1px solid hsl(150, 84%, 44%);
+    border-radius: 14px;
+}
+
+form label {
+    padding: 0.3em;
 }
 
 .income label + input,
@@ -10,9 +57,46 @@
     display: block;
 }
 
-legend {
+.output {
+    padding: 0.5em;
+    font-size: 1.3rem;
+    color: hsl(150, 84%, 44%);
+}
+
+form button {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    font-size: 0.9rem;
+    width: 30%;
+    border: 1px solid hsl(150, 84%, 44%);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+}
+
+.totals {
+    padding: 1em;
+}
+
+.totals h3 {
     font-size: 2rem;
 }
-.summary, .fiveThreeTwoRule {
-    width: 40%;
+
+.totals p {
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1280px) {
+    form h3 {
+        font-size: 1.8rem;
+    }
+
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .row > * {
+        flex: 1 1 100px;
+    }
 }
